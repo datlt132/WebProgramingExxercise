@@ -3,7 +3,7 @@
     $username = 'root';
     $password = '123456';
     $db = 'mydatabase';
-    $table_name = 'Categories';
+    $table_name = 'categories';
 
     $connect = mysqli_connect($server, $username, $password, $db);
 
@@ -24,7 +24,8 @@
         if ((strlen($bizName) > 0)
             && (strlen($address) > 0)
             && (strlen($city) > 0)
-            && (count($categories) > 0)) {
+            && (count($categories) > 0)
+        ){
             $isRegistered = true;
         }
     }
@@ -36,7 +37,7 @@
     <body>
         <h1>Business Registration</h1>
         <hr>
-        <form action="add_biz.php" method="POST">
+        <form action="ex6.2.php" method="POST">
             <table>
                 <tr>
                     <td>
@@ -62,14 +63,16 @@
 
                                     if ($result) {
                                         $bizID = $connect->insert_id;
-                                        $table_name = "Biz_Categories";
+                                        $table_name = "biz_categories";
                                         
                                         foreach ($categoriesList as $row) {
                                             if (in_array($row[1], $categories)) 
                                             {
-                                                $catBizUpdateQuery = "INSERT INTO $table_name(business_id, category_id) VALUES($bizID, '$row[0]')";
-                                                
+                                                $catBizUpdateQuery = "INSERT INTO $table_name(BusinessId, CategoryId) VALUES($bizID, '$row[0]')";
+
+                                                console.log("aaaaa");
                                                 if (!$connect->query($catBizUpdateQuery)) {
+                                                    console.log("sssss");
                                                     $connect->rollback();
                                                     echo "Insert failed! query = $catBizUpdateQuery";
                                                     $isRegisterSuccess = false;
@@ -143,7 +146,7 @@
                         if(!$isRegistered) {
                         echo '<input type="submit" value="Add Business">';
                         } else {
-                        echo '<a href="add_biz.php">Add Another Business</a>';
+                        echo '<a href="ex6.2.php">Add Another Business</a>';
                         }
                         $connect->close();
                     ?>

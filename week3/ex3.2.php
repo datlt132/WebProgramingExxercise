@@ -37,10 +37,10 @@
             
             switch($pick) {
                 case 0 :
-                    echo "<br>$num <span>&#960</span> => $deg <span>&#8451</span>";
+                    echo "<br>$num <span>(rad)</span> => $deg <span></span>"; # &#960 &#8451
                     break;
                 case 1 :
-                    echo "<br>$num <span>&#8451</span>=> $rad <span>&#960</span>";
+                    echo "<br>$num <span></span> => $rad <span>(rad)</span>"; # &#8451 &#960
                     break;
                 default :
                     break;

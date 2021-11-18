@@ -7,7 +7,6 @@
     <title>Date Time Processing Exercise</title>
 </head>
 <body>
-    <h3>Năm nhuận :</h3><br>
     <span>Enter your name and select and time for the apppointment</span><br></br>
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <table>

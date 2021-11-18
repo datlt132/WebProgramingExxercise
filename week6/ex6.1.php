@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Category Administration</h1>
-    <form action="admin.php" method="POST">
+    <form action="ex6.1.php" method="POST">
         <?php
             $server = 'localhost';
             $username = 'root';

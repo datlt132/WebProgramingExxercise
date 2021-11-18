@@ -2,7 +2,7 @@
     
     <head><title>Regular</title></head>
     <body>
-        <form action="exercise.php" method="POST">
+        <form action="ex12.1.php" method="POST">
             <table>
                 <tr>
                     <td>Enter email address</td>

@@ -33,7 +33,7 @@
             print '<table border=1>';
             print '<th>Click on a category to find business listings:';
             foreach ($categoriesList as $row) {                
-              print "<tr><td><a href='biz_listing.php?cartID=$row[0]'>$row[1]</a></td></tr>";
+              print "<tr><td><a href='ex6.3.php?cartID=$row[0]'>$row[1]</a></td></tr>";
             }
             print "</table>";
           ?>

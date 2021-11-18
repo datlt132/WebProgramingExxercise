@@ -61,7 +61,7 @@ if (isset($_POST["submitted"], $_POST["sort_type"])) {
 }
 ?>
 
-<form action="UserSorting.php" method="post">
+<form action="ex4.1.php" method="post">
     <p>
     <div class="row">
         <div class="column">
